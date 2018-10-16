@@ -11,7 +11,11 @@ import em.rest.backend.model.note.NoteModel;
 @Component("noteConvert")
 public class NoteConvert {
 
-	public List<NoteModel> noteEntityConvertNoteModel( List<NoteEntity> notaEntities ){
+	public NoteModel noteEntityConvertNoteModel(NoteEntity noteEntity) {
+		return new NoteModel(noteEntity); 
+	}
+	
+	public List<NoteModel> noteEntityListConvertNoteModelList( List<NoteEntity> notaEntities ){
 		
 		List<NoteModel> noteModels = new ArrayList<>();
 		
