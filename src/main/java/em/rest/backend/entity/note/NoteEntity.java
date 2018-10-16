@@ -1,5 +1,7 @@
 package em.rest.backend.entity.note;
 
+import java.io.Serializable;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -7,7 +9,9 @@ import javax.persistence.Table;
 
 @Entity
 @Table
-public class NoteEntity {
+public class NoteEntity implements Serializable {
+
+	private static final long serialVersionUID = 4885011465247725526L;
 
 	@Id
 	@GeneratedValue
